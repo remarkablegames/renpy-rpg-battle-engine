@@ -34,47 +34,55 @@
 ### Create new character:
 1. Open scripts/define/char_def.rpy and scroll to the bottom
 2. Use this template and follow the previous examples to define a new character:
-```
+```py
 define character.var = Character("Name", image="")
 default var = Char("Name", img="", skills=[], p_skills=[], equip={'hand': None, 'head': None, 'chest': None, 'accs': None})
 ```
 3. Open scripts/define/assets/images.rpy and define the battle avatar, either following the examples or using this more basic template:
-```
+```py
 image char_battle = "images/char/char_battle.png"
 ```
 4. Add the character sprite/s to the images/char folder
 5. You can now add it to the party_list list:
-`$ var.append(party_list)`
+```py
+$ var.append(party_list)
+```
 
 ### Create new monster:
 1. Open scripts/define/monsters_def.rpy and look for the load_monsters label
 2. Use this template and follow the examples to define a new monster:
-```
+```py
 monster_var = Monster(name, hpmax, atk, dfn, exp, lvl, img, sfx_atk, anim, skills)
 ```
 3. Add the monster sprite to the images/monsters folder
 4. You can now add it to the wild_monsters list:
-`$ monster_var.append(wild_monsters)`
+```py
+$ monster_var.append(wild_monsters)
+```
 
 ### Create new skill:
 1. Open scripts/define/battle_def.rpy and look for the other skills defined at the bottom
 2. Follow the examples and use the respective template depending if it's a passive or active skill:
-```
+```py
 default skill_var = ActiveSkill(name, pwr, mp_cost, sfx, targ, targs, type='active', trans=None, img=None, back_row=False)`
 default skill_var = PassiveSkill(name, sfx=None, img=None, trans=None, lvl=0)
 ```
 3. You can now append it to a character:
-`$ skill_var.addSkill(a)`
+```py
+$ skill_var.addSkill(a)
+```
 
 ### Create new item:
 1. Open scripts/define/items_def.rpy and look for the load_items label
 2. Use this template and follow the examples to define a new item:
-```
+```py
 item_var = Item(name, desc, icon=False, value=0, act=Show("inventory_popup", message="Nothing happened!"), type="item", recipe=False, tags={})
 ```
 3. Add the item sprite to the images/inv folder
 4. You can now append it to your inventory, indicating the quantity:
-`$ player_inv.take(item_var,2)`
+```py
+$ player_inv.take(item_var,2)
+```
 
 ### battle.rpy:
 * Battle setup
