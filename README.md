@@ -24,10 +24,10 @@
 
 ## Screenshots
 
-![screenshot](https://i.ibb.co/H2wmjgc/image.png)
-![screenshot](https://i.ibb.co/FzfYpzp/image.png)
-![screenshot](https://i.ibb.co/Ybpbd4G/image.png)
-![screenshot](https://i.ibb.co/VJ10kcn/image.png)
+![screenshot 1](screenshots/1.png)
+![screenshot 2](screenshots/2.png)
+![screenshot 3](screenshots/3.png)
+![screenshot 4](screenshots/4.png)
 
 ## Documentation
 
